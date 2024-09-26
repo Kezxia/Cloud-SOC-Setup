@@ -9,7 +9,7 @@
 
 
 <details>
-<summary>Part 1: Create your Azure Account</summary>
+<summary>Part 1: Create your Azure Account.</summary>
 
 To create your Azure account, you must have a Microsoft account. Select this [link](https://signup.live.com/signup?lcid=1033&wa=wsignin1.0&rpsnv=13&ct=1678357788&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2faccount.microsoft.com%2fauth%2fcomplete-signin%3fru%3dhttps%253A%252F%252Faccount.microsoft.com%252F%253Frefd%253Daccount.microsoft.com%2526refp%253Dsignedout-index&lc=1033&id=292666&lw=1&fl=easi2&mkt=en-US&lic=1&uaid=c9cb9b166cd245398fae9f662958ebda) to create a Microsoft account. If you already have an account, you can use an email address, Skype ID, or phone number to sign into your Windows PC, Xbox, or Microsoft services like Microsoft 365. You can check [here](https://go.microsoft.com/fwlink/?linkid=2215203) to confirm whether you have a Microsoft account. 
 
@@ -25,7 +25,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 
 
 <details>
-<summary>Part 2: Create a Windows 10 Pro Virtual Machine</summary>
+<summary>Part 2: Create a Windows 10 Pro Virtual Machine.</summary>
 
 1. Search for Virtual Machines.<br>
 ![Azure image](https://imgur.com/U2rNpEs.png)<br>
@@ -53,7 +53,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 
 
 <details>
-<summary>Part 3: Create a Linux Virtual Machine</summary>
+<summary>Part 3: Create a Linux Virtual Machine.</summary>
 
 1. Search for Virtual Machines.<br>
 ![Azure image](https://imgur.com/U2rNpEs.png)<br>
@@ -83,7 +83,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 
 
 <details>
-<summary>Part 4: Configure Network Security Group (Layer 4 Firewall) to allow all traffic inbound for both VMs</summary>
+<summary>Part 4: Configure Network Security Group (Layer 4 Firewall) to allow all traffic inbound for both VMs.</summary>
 
 1. Search for Network Security Groups.<br>
 ![Azure image](https://imgur.com/Izr6U5Z.png)<br>
@@ -106,5 +106,71 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Azure image](https://imgur.com/rs6jxCT.png)
 7. Click Overview to see the security rule has been added.<br>
 ![Azure image](https://imgur.com/yBuXdos.png)
+
+</details>
+
+
+![Architecture Diagram](https://imgur.com/qyxi43s.png)
+
+> [!NOTE]
+> In this lab, we’ll disable the Windows internal firewall. Instead of creating a standalone SQL Server database, we’re going to install it inside the Windows VM. Then, we’ll use Remote Desktop (RDP) to access the Windows VM, and we’ll ping and SSH into the Linux VM.
+
+<details>
+<summary>Part 1: Remote into the Windows VM and turn off the Windows Firewall.</summary>
+
+1. Download Microsoft Remote Desktop to connect to the Windows VM.<br>
+![Azure image](https://imgur.com/bDWjeJJ.png)<br>
+2. Copy the Windows IP address and open the Microsoft Remote Desktop app.<br>
+- Add PC and paste the IP address
+- Give the pc a name and click add
+- Double-click on windows-vm and enter the Username and Password
+- Once logged in, click Accept
+![Azure image](https://imgur.com/vtg0yIs.png)
+![Azure image](https://imgur.com/iLSFGxn.png)
+![Azure image](https://imgur.com/cD3bHiQ.png)
+![Azure image](https://imgur.com/dNnsOYU.png)
+![Azure image](https://imgur.com/4SvK37D.png)
+![Azure image](https://imgur.com/oOlKfCi.png)
+3. Open up the terminal to ping the Windows pc. Request is timing out because the Windows Firewall is still on.<br>
+![Azure image](https://imgur.com/fCKbPCp.png)
+4. Go to the search bar and type: wf.msc.<br>
+![Azure image](https://imgur.com/RLcg4AG.png)
+5. Click on “Windows Defender Firewall Properties”.<br>
+![Azure image](https://imgur.com/WDLxjc0.png)
+6. Turn the Firewall state “Off” for the Domain Profile, Private Profile & Public Profile.<br>
+![Azure image](https://imgur.com/jowxYGx.png)
+![Azure image](https://imgur.com/d3bmNDl.png)
+![Azure image](https://imgur.com/DCYDKuG.png)
+7. Once the Firewalls are turned off, the pings goes through.<br>
+![Azure image](https://imgur.com/tOUZeQg.png)
+
+</details>
+
+
+<details>
+<summary>Part 2: Install SQL Server Evaluation.</summary>
+
+1. Open Edge and paste this [link](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019) and select download the EXE.<br>
+![Azure image](https://imgur.com/zPgooiX.png)<br>
+2. Register for Free Trial with fake information as this is for learning purposes.<br>
+![Azure image](https://imgur.com/u4YOals.png)
+3. Download the EXE, open the file, click Download Media, and click ISO pkg. Download it on the desktop.<br>
+![Azure image](https://imgur.com/qGss5Io.png)
+![Azure image](https://imgur.com/j06MPeo.png)
+![Azure image](https://imgur.com/kp3OPkT.png)
+4. Click on Open Folder, right click and click mount, then select the setup file to download SQL.<br>
+![Azure image](https://imgur.com/7XmBLG1.png)
+![Azure image](https://imgur.com/sK31VmV.png)
+![Azure image](https://imgur.com/6kjiebn.png)
+5. Click Installation, then click “New SQL Server stand-alone…” then click next several times.<br>
+![Azure image](https://imgur.com/u12uu54.png)
+6. Under Feature Selection, select Database Engine Services, then click next.<br>
+![Azure image](https://imgur.com/PlTcYDe.png)
+7. Under Database Engine Configuration, select Mixed Mode (SQL Server authentication & Windows authentication).<br>
+- enter the same password we created earlier
+- add Current User, then click next, and then install
+![Azure image](https://imgur.com/qPyteur.png)
+8. Install is complete.<br>
+![Azure image](https://imgur.com/7Jx0ZPE.png)
 
 </details>
