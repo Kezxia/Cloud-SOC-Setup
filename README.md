@@ -113,7 +113,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Architecture Diagram](https://imgur.com/qyxi43s.png)
 
 > [!NOTE]
-> In this lab, we’ll disable the Windows internal firewall. Instead of creating a standalone SQL Server database, we’re going to install it inside the Windows VM. Then, we’ll use Remote Desktop (RDP) to access the Windows VM, and we’ll ping and SSH into the Linux VM.
+> In this lab, we’ll use Remote Desktop (RDP) to access the Windows VM and ping it from our terminal. We’ll disable the Windows internal firewall, and instead of creating a standalone SQL Server database, we’ll install it inside the Windows VM. Then, we’ll ping and SSH into the Linux VM.
 
 <details>
 <summary>Part 1: Remote into the Windows VM and turn off the Windows Firewall.</summary>
@@ -172,5 +172,38 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Azure image](https://imgur.com/qPyteur.png)
 8. Install is complete.<br>
 ![Azure image](https://imgur.com/7Jx0ZPE.png)
+
+</details>
+
+
+<details>
+<summary>Part 3: Install SSMS (SQL Server Management Studio).</summary>
+
+1. Open Edge and paste this [link](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) and select download the SSMS.<br>
+![Azure image](https://imgur.com/pbvLWwz.png)<br>
+2. Open file, click install, restart & login again via Microsoft Remote Desktop.<br>
+![Azure image](https://imgur.com/C7RhTru.png)
+![Azure image](https://imgur.com/m65Bj2f.png)
+![Azure image](https://imgur.com/dNnsOYU.png)
+
+</details>
+
+<details>
+<summary>Part 4: Enable logging for SQL Server to be ported into Windows Event Viewer.</summary>
+
+1. Search for Registry Editor and paste the Registry Path below in the search bar:
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security
+- Right click Security key & click on permissions
+![Azure image](https://imgur.com/H3CxFUD.png)<br>
+2. Click Add and type “NETWORK SERVICE”, then click “Check Names”, then click Ok.<br>
+![Azure image](https://imgur.com/TfBqtxP.png)
+3. Select NETWORK SERVICE, select Full Control, click apply & ok.<br>
+![Azure image](https://imgur.com/3Zly0HS.png)
+4. Search cmd for the command line, right click & run as admin, then paste the command below:
+  - auditpol /set /subcategory:"application generated" /success:enable /failure:enable
+  - it should successfully execute
+![Azure image](https://imgur.com/XXhbVxx.png)
+![Azure image](https://imgur.com/teTUT6Z.png)
+5. Open up SSMS and login
 
 </details>
