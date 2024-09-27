@@ -206,25 +206,50 @@ Once you create your Azure account, you will enter into the [Azure portal](https
   - it should successfully execute
 ![Azure image](https://imgur.com/XXhbVxx.png)
 ![Azure image](https://imgur.com/teTUT6Z.png)
-6. Search for and open up the SSMS app.<br>
+
+
+</details>
+
+
+<details>
+<summary>Part 5: Test SQL logging to make sure it’s working properly.</summary>
+
+1. Search for and open up the SSMS app.<br>
 ![Azure image](https://imgur.com/5g8os0d.png)
-7. Change Authentication from Windows to SQL Server.<br>
+2. Change Authentication from Windows to SQL Server.<br>
 ![Azure image](https://imgur.com/zLWzPX7.png)
-8. Enter the username & password we created earlier.<br>
+3. Enter the username and password we created earlier.<br>
 ![Azure image](https://imgur.com/n3wWfRR.png)
-9. Once logged in, click on windows-vm SQL Server, then right-click on properties.<br>
+4. Once logged in, click on windows-vm SQL Server, then right-click on properties.<br>
 ![Azure image](https://imgur.com/soUFCS2.png)
-10. Click on Security, under login auditing, click “both failed and successful login”, then ok.<br>
+5. Click on Security, under login auditing, click “both failed and successful login”, then ok.<br>
 ![Azure image](https://imgur.com/Ip8XT6Q.png)
-11. Restart the server by clicking on windows-vm SQL Server, then click restart, and yes.<br>
+6. Restart the server by clicking on windows-vm SQL Server, then click restart, and yes.<br>
 ![Azure image](https://imgur.com/BI3mSFI.png)
 ![Azure image](https://imgur.com/XyKZEhh.png)
-12. Disconnect, re-connect, then enter wrong password to create a failed login log.<br>
+7. Disconnect, re-connect, then enter wrong password to create a failed login log.<br>
 ![Azure image](https://imgur.com/J8h2KjW.png)
 ![Azure image](https://imgur.com/QsyTs0j.png)
 ![Azure image](https://imgur.com/LA4rKMk.png)
-13. Search for and open the Event Viewer app to view failed login under Application.<br>
+8. Search for and open the Event Viewer app to view failed login under Application.<br>
 ![Azure image](https://imgur.com/ILDqANs.png)
 ![Azure image](https://imgur.com/D4sAk43.png)
+
+</details>
+
+
+<details>
+<summary>Part 6: Test ping and logging into Linux VM via SSH.</summary>
+
+1. Copy the linux IP address.<br>
+![Azure image](https://imgur.com/IX2tOT0.png)
+2. Open up the terminal to ping the Linux VM. Enter: ping 20.75.86.94, then ctrl C to stop the pings.<br>
+![Azure image](https://imgur.com/YSdbvWT.png)
+3. SSH into the Linux VM. Enter: ssh labuser@20.75.86.94<br>
+![Azure image](https://imgur.com/tIJ6y39.png)
+4. To trust the certificate the VM is offering up to establish the SSH connection, you need to type yes, then the password we created earlier (nothing will show up, but it’s there).<br>
+![Azure image](https://imgur.com/SL29xyQ.png)
+4. This is how you know you have successfully logged into the Linux VM.<br>
+![Azure image](https://imgur.com/KFygg9N.png)
 
 </details>
