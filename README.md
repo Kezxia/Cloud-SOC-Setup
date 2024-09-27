@@ -199,11 +199,32 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Azure image](https://imgur.com/TfBqtxP.png)
 3. Select NETWORK SERVICE, select Full Control, click apply & ok.<br>
 ![Azure image](https://imgur.com/3Zly0HS.png)
-4. Search cmd for the command line, right click & run as admin, then paste the command below:
+4. Copy the Windows Command Prompt.<br>
+![Azure image](https://imgur.com/WROPxyb.png)
+5. Search cmd for the command line, right click & run as admin, then paste the command below:
   - auditpol /set /subcategory:"application generated" /success:enable /failure:enable
   - it should successfully execute
 ![Azure image](https://imgur.com/XXhbVxx.png)
 ![Azure image](https://imgur.com/teTUT6Z.png)
-5. Open up SSMS and login
+6. Search for and open up the SSMS app.<br>
+![Azure image](https://imgur.com/5g8os0d.png)
+7. Change Authentication from Windows to SQL Server.<br>
+![Azure image](https://imgur.com/zLWzPX7.png)
+8. Enter the username & password we created earlier.<br>
+![Azure image](https://imgur.com/n3wWfRR.png)
+9. Once logged in, click on windows-vm SQL Server, then right-click on properties.<br>
+![Azure image](https://imgur.com/soUFCS2.png)
+10. Click on Security, under login auditing, click “both failed and successful login”, then ok.<br>
+![Azure image](https://imgur.com/Ip8XT6Q.png)
+11. Restart the server by clicking on windows-vm SQL Server, then click restart, and yes.<br>
+![Azure image](https://imgur.com/BI3mSFI.png)
+![Azure image](https://imgur.com/XyKZEhh.png)
+12. Disconnect, re-connect, then enter wrong password to create a failed login log.<br>
+![Azure image](https://imgur.com/J8h2KjW.png)
+![Azure image](https://imgur.com/QsyTs0j.png)
+![Azure image](https://imgur.com/LA4rKMk.png)
+13. Search for and open the Event Viewer app to view failed login under Application.<br>
+![Azure image](https://imgur.com/ILDqANs.png)
+![Azure image](https://imgur.com/D4sAk43.png)
 
 </details>
