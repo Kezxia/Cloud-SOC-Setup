@@ -1,6 +1,6 @@
 # Cloud-SOC-Setup
 
-![Architecture Diagram](https://imgur.com/qyxi43s.png)
+![Architecture Diagram](https://imgur.com/BIRvHXb.png)
 
 > [!NOTE]
 > In this lab, we will create our tenant, which serves as our main Azure account. When you create your account, the subscription will be created automatically. Next, we will create a resource group to hold our resources. Within that resource group, we will set up a virtual network, where our virtual machines will be connected—one will be a Windows VM and the other a Linux VM. Finally, we will configure the firewalls for both NSGs (Network Security Groups) to allow all internet traffic.
@@ -110,7 +110,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 </details>
 
 
-![Architecture Diagram](https://imgur.com/qyxi43s.png)
+![Architecture Diagram](https://imgur.com/u0D47LR.png)
 
 > [!NOTE]
 > In this lab, we’ll use Remote Desktop (RDP) to access the Windows VM and ping it from our terminal. We’ll disable the Windows internal firewall, and instead of creating a standalone SQL Server database, we’ll install it inside the Windows VM. Then, we’ll ping and SSH into the Linux VM.
@@ -251,5 +251,20 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Azure image](https://imgur.com/SL29xyQ.png)
 4. This is how you know you have successfully logged into the Linux VM.<br>
 ![Azure image](https://imgur.com/KFygg9N.png)
+
+</details>
+
+
+![Architecture Diagram](https://imgur.com/qyxi43s.png)
+
+> [!NOTE]
+> In this lab, we will create a third virtual machine called attack-vm in a region outside the US and place it in its own resource group. From the attack-vm, we will simulate an attacker attempting to log in to the SQL Server, the Windows VM, and the Linux VM via SSH. Then, we’ll observe the logs after the attacks.
+
+
+<details>
+<summary>Part 1: Create another Windows VM in a region outside the US and NAME IT “attack-vm”.</summary>
+
+1. Copy the linux IP address.<br>
+![Azure image](https://imgur.com/IX2tOT0.png)
 
 </details>
