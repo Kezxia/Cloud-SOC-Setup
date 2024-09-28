@@ -264,6 +264,47 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <details>
 <summary>Part 1: Create another Windows VM in a region outside the US and NAME IT “attack-vm”.</summary>
 
+</details>
 
+<details>
+<summary>Part 2: Generate some failed RDP logs against “windows-vm”.</summary>
+
+</details>
+
+<details>
+<summary>Part 3: Generate some failed MS SQL Auth logs against “windows-vm”.</summary>
+
+</details>
+
+<details>
+<summary>Part 4: Generate some failed SSH logs against “linux-vm”.</summary>
+
+</details>
+
+<details>
+<summary>Part 5: Admin Mode (pretend you are normal admin).</summary>
+
+</details>
+
+
+
+![Architecture Diagram](https://imgur.com/Qa1MyLI.png)
+
+> [!NOTE]
+> In this lab, we will explore Active Directory, now called Microsoft Entra ID, along with users and permissions. This is where users and permissions are created and managed in Azure. We will perform activities to gain a better understanding of the Azure hierarchy, covering subscriptions, resources, resource groups, and identity and access management.
+
+
+<details>
+<summary>Part 1: Configure and Observe Tenant-Level Global Reader.</summary>
+
+</details>
+
+<details>
+<summary>Part 2: Configure and Observe Subscription Reader.</summary>
+
+</details>
+
+<details>
+<summary>Part 3: Configure and Observe Resource Group Contributor (like an admin).</summary>
 
 </details>
