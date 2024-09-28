@@ -255,7 +255,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 </details>
 
 
-![Architecture Diagram](https://imgur.com/7lkU7DZ.png)
+![Architecture Diagram](https://imgur.com/8Dyootf.png)
 
 > [!NOTE]
 > In this lab, we will create a third virtual machine called attack-vm in a region outside the US and place it in its own resource group. From the attack-vm, we will simulate an attacker attempting to log in to the SQL Server, the Windows VM, and the Linux VM via SSH. Then, we’ll observe the logs after the attacks.
