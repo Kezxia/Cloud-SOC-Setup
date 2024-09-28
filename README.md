@@ -291,7 +291,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Architecture Diagram](https://imgur.com/Qa1MyLI.png)
 
 > [!NOTE]
-> In this lab, we will explore Active Directory, now called Microsoft Entra ID, along with users and permissions. This is where users and permissions are created and managed in Azure. We will perform activities to gain a better understanding of the Azure hierarchy, covering subscriptions, resources, resource groups, and identity and access management.
+> In this lab, we will explore Microsoft Entra ID (formerly Active Directory) and the management of users and permissions in Azure. You will gain hands-on experience with creating and managing users and permissions, while deepening your understanding of the Azure hierarchy. We will navigate through subscriptions, resources, resource groups, and identity and access management (IAM) to understand how they interrelate.
 
 
 <details>
