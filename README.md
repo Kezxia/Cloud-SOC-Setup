@@ -264,16 +264,29 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <details>
 <summary>Part 1: Create another Windows VM in a region outside the US and NAME IT “attack-vm”.</summary>
 
+1. Name the Resource Group “RG-Cyber-Lab-Attacker” and the VNet “Lab-VNet-Attacker”.<br>
+![Architecture Diagram](https://imgur.com/IP6FJJb.png)
+2. Log into the “attack-vm” to make sure it works.<br>
+![Architecture Diagram](https://imgur.com/GtK6eCg.png)
+3. Retrieve the public IP address of the “windows-vm” from the Azure Portal, save it for the next steps (windows IP: 135.237.136.61).<br>
 </details>
 
 <details>
-<summary>Part 2: Generate some failed RDP logs against “windows-vm”.</summary>
+<summary>Part 2: Generate some failed RDP logs against the “windows-vm”.</summary>
 
+1. From within the “attack-vm”, attempt to RDP into the “windows-vm” with the wrong credentials.<br>
+![Architecture Diagram](https://imgur.com/xt2Vwb2.png)
+![Architecture Diagram](https://imgur.com/1AyJW1R.png)
+![Architecture Diagram](https://imgur.com/l9gS00r.png)
+3. Repeat this step 2 more times with the wrong username and password.<br>
 </details>
 
 <details>
 <summary>Part 3: Generate some failed MS SQL Auth logs against “windows-vm”.</summary>
 
+1. Still within the “attack-vm”, install [SSMS](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) if not already installed.<br>
+2. Attempt to connect to the SQL Server on “windows-vm” with a bad password.<br>
+3. Login with your real credential to show you can login from Australia to the server that is in the East Coast.<br>
 </details>
 
 <details>
