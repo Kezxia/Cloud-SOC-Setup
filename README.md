@@ -285,8 +285,13 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <summary>Part 3: Generate some failed MS SQL Auth logs against “windows-vm”.</summary>
 
 1. Still within the “attack-vm”, install [SSMS](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) if not already installed.<br>
-2. Attempt to connect to the SQL Server on “windows-vm” with a bad password.<br>
-3. Login with your real credential to show you can login from Australia to the server that is in the East Coast.<br>
+![Architecture Diagram](https://imgur.com/vqkFaGo.png)
+![Architecture Diagram](https://imgur.com/undefined.png)
+3. Attempt to connect to the SQL Server on the “windows-vm” with a bad password.<br>
+![Architecture Diagram](https://imgur.com/oA8lzuW.png)
+![Architecture Diagram](https://imgur.com/yVtBiRL.png)
+5. Login with your real credential to show you can login from Australia to the server that is in the East Coast.<br>
+![Architecture Diagram](https://imgur.com/8zHsAUu.png)
 </details>
 
 <details>
