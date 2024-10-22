@@ -297,11 +297,22 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <details>
 <summary>Part 4: Generate some failed SSH logs against “linux-vm”.</summary>
 
+1. Still within the “attack-vm”, attempt to SSH into “linux-vm” with the wrong credentials.<br>
+![Architecture Diagram](https://imgur.com/RxbrymF.png)
 </details>
 
 <details>
 <summary>Part 5: Admin Mode (pretend you are normal admin).</summary>
 
+1. RDP back into “windows-vm & open up Event Viewer to see the logs.<br>
+- Filter Current Logs with 4625 to see failed logins.
+![Architecture Diagram](https://imgur.com/TBzSnJq.png)
+2. Inspect the failures and successes (Security Log for RDP, Application Log for SQL).<br>
+- Filter Current Logs with 4625 to see failed logins under Security.
+![Architecture Diagram](https://imgur.com/ubQeMiv.png)
+- Filter Current Logs with 18456 to see failed logins under Application.
+![Architecture Diagram](https://imgur.com/ulvOasD.png)
+3. SSH into the Linux VM, and observe the logs.<br>
 </details>
 
 
