@@ -354,6 +354,13 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 - Open up a new private tab → got to Azure.portal.com → paste the user principal name → login in with the auto-generated password. You will then be asked to update the password.
 ![Architecture Diagram](https://imgur.com/PVUsU84.png)
 ![Architecture Diagram](https://imgur.com/GET5unv.png)
+- Observe being able to view the users as globalreaderjohn, because you’re a global reader.
+![Azure image](https://imgur.com/ubBm5pv.png)
+- Observe being unable to view the subscription.
+![Azure image](https://imgur.com/eFgRn6n.png)
+- Observe being unable to reset a password.
+![Azure image](https://imgur.com/TEUbxrW.png)
+- Close browser/incognito when satisfied.
 </details>
 
 <details>
