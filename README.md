@@ -359,6 +359,21 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <details>
 <summary>Part 2: Configure and Observe Subscription Reader.</summary>
 
+1. Back in main browser, create another user within Microsoft Entra ID (username: subreaderjane).<br>
+- Search for Microsoft Entra ID, select Users, and select Create new user.
+![Architecture Diagram](https://imgur.com/Lg4aPbt.png)
+2. Name the username "subreaderjane" and copy the auto-generated password for later use. Then select Review + create.
+![Architecture Diagram](https://imgur.com/YibNneJ.png)
+![Architecture Diagram](https://imgur.com/JBy4vK1.png)
+3. Go back to Users to see that the New User: subreaderjane has been created.
+![Architecture Diagram](https://imgur.com/RoTVmYL.png)
+4. Assign Subscription-Level Reader.<br>
+- Search for Subscriptions, then click on your Subscriptions.
+- Select Access control (IAM) & Add a role assignment.
+- Search for and select “Reader” → then select next.
+- Select “+ select members”, then select subreaderjane, then click select.
+- Select “Review + assign”.
+- Refresh and the new Role should show up.
 </details>
 
 <details>
