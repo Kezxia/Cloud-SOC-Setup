@@ -333,6 +333,16 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <details>
 <summary>Part 1: Configure and Observe Tenant-Level Global Reader.</summary>
 
+1. Create a user within Microsoft Entra ID (username: globalreaderjohn).<br>
+- Search for Microsoft Entra ID, select Users, and select Create new user.
+![Architecture Diagram](https://imgur.com/Lg4aPbt.png)
+- Name the username "globalreaderjohn" and copy the auto-generated password for later use. Then select Review + create.
+![Architecture Diagram](https://imgur.com/hDQkxKB.png)
+![Architecture Diagram](https://imgur.com/xtmn3TU.png)
+- Go back to Users to see that the New User: globalreaderjohn has been created.
+![Architecture Diagram](https://imgur.com/4ZCIgSk.png)
+2. Assign Tenant-Level Global Reader.<br>
+3. In a new browser/incognito, log in as globalreaderjohn and observe result of being a Tenant Level “Global Reader”.<br>
 </details>
 
 <details>
