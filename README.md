@@ -298,7 +298,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <summary>Part 4: Generate some failed SSH logs against “linux-vm”.</summary>
 
 1. Still within the “attack-vm”, attempt to SSH into “linux-vm” with the wrong credentials.<br>
-![Architecture Diagram](https://imgur.com/RxbrymF.png)
+![Architecture Diagram](https://imgur.com/lEQKcIq.png)
 </details>
 
 <details>
@@ -313,6 +313,13 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 - Filter Current Logs with 18456 to see failed logins under Application.
 ![Architecture Diagram](https://imgur.com/ulvOasD.png)
 3. SSH into the Linux VM, and observe the logs.<br>
+![Architecture Diagram](https://imgur.com/TITO9oy.png)
+- cat auth.log | grep password will list the lines with the word password in it.
+![Architecture Diagram](https://imgur.com/96H0JVJ.png)
+- cat auth.log | grep Accepted will list the lines with the word Accepted in it.
+![Architecture Diagram](https://imgur.com/J0I07ar.png)
+- cat auth.log | grep josh will list the lines with the word tara in it.
+![Architecture Diagram](https://imgur.com/j6RCAHK.png)
 </details>
 
 
