@@ -265,9 +265,9 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <summary>Part 1: Create another Windows VM in a region outside the US and NAME IT “attack-vm”.</summary>
 
 1. Name the Resource Group “RG-Cyber-Lab-Attacker” and the VNet “Lab-VNet-Attacker”.<br>
-![Architecture Diagram](https://imgur.com/IP6FJJb.png)
+![Azure image](https://imgur.com/IP6FJJb.png)
 2. Log into the “attack-vm” to make sure it works.<br>
-![Architecture Diagram](https://imgur.com/GtK6eCg.png)
+![Azure image](https://imgur.com/GtK6eCg.png)
 3. Retrieve the public IP address of the “windows-vm” from the Azure Portal, save it for the next steps (windows IP: 135.237.136.61).<br>
 </details>
 
@@ -275,9 +275,9 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <summary>Part 2: Generate some failed RDP logs against the “windows-vm”.</summary>
 
 1. From within the “attack-vm”, attempt to RDP into the “windows-vm” with the wrong credentials.<br>
-![Architecture Diagram](https://imgur.com/xt2Vwb2.png)
-![Architecture Diagram](https://imgur.com/1AyJW1R.png)
-![Architecture Diagram](https://imgur.com/l9gS00r.png)
+![Azure image](https://imgur.com/xt2Vwb2.png)
+![Azure image](https://imgur.com/1AyJW1R.png)
+![Azure image](https://imgur.com/l9gS00r.png)
 3. Repeat this step 2 more times with the wrong username and password.<br>
 </details>
 
@@ -335,7 +335,7 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 
 1. Create a user within Microsoft Entra ID (username: globalreaderjohn).<br>
 - Search for Microsoft Entra ID, select Users, and select Create new user.
-![Architecture Diagram](https://imgur.com/Lg4aPbt.png)
+![Architecture Diagram](https://imgur.com/I9e4DDI.png)
 2. Name the username "globalreaderjohn" and copy the auto-generated password for later use. Then select Review + create.
 ![Architecture Diagram](https://imgur.com/hDQkxKB.png)
 ![Architecture Diagram](https://imgur.com/xtmn3TU.png)
@@ -361,19 +361,26 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 
 1. Back in main browser, create another user within Microsoft Entra ID (username: subreaderjane).<br>
 - Search for Microsoft Entra ID, select Users, and select Create new user.
-![Architecture Diagram](https://imgur.com/Lg4aPbt.png)
+![Azure image](https://imgur.com/I9e4DDI.png)
 2. Name the username "subreaderjane" and copy the auto-generated password for later use. Then select Review + create.
-![Architecture Diagram](https://imgur.com/YibNneJ.png)
-![Architecture Diagram](https://imgur.com/JBy4vK1.png)
+![Azure image](https://imgur.com/YibNneJ.png)
+![Azure image](https://imgur.com/JBy4vK1.png)
 3. Go back to Users to see that the New User: subreaderjane has been created.
-![Architecture Diagram](https://imgur.com/RoTVmYL.png)
+![Azure image](https://imgur.com/RoTVmYL.png)
 4. Assign Subscription-Level Reader.<br>
-- Search for Subscriptions, then click on your Subscriptions.
-- Select Access control (IAM) & Add a role assignment.
-- Search for and select “Reader” → then select next.
-- Select “+ select members”, then select subreaderjane, then click select.
+- Search for Subscriptions → select on your Subscription → select Access control (IAM) & Add a role assignment.
+![Azure image](https://imgur.com/WtFr8b6.png)
+- Search for and select “Reader” → select next.
+![Azure image](https://imgur.com/qDGVgEQ.png)
+- Select “+ select members”, → select subreaderjane, then click select.
+![Azure image](https://imgur.com/J1QK5hM.png)
 - Select “Review + assign”.
-- Refresh and the new Role should show up.
+![Azure image](https://imgur.com/cXPKHl6.png)
+5. In a new browser/incognito, log in as subreaderjane and observe result of being a Subscription Level “Global Reader”.<br>
+- Go back to the Overview of subreaderjane & copy the User principal name.
+![Azure image](https://imgur.com/a2frJxj.png)
+- Open up a new private tab → got to Azure.portal.com → paste the user principal name → login in with the auto-generated password. You will then be asked to update the password.
+- Observe being able to view the subscription & resource groups as subreaderjane.
 </details>
 
 <details>
