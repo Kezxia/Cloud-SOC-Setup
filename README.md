@@ -331,18 +331,29 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 
 
 <details>
-<summary>Part 1: Configure and Observe Tenant-Level Global Reader.</summary>
+<summary>Part 1: Configure and Observe a Tenant-Level Global Reader.</summary>
 
 1. Create a user within Microsoft Entra ID (username: globalreaderjohn).<br>
 - Search for Microsoft Entra ID, select Users, and select Create new user.
 ![Architecture Diagram](https://imgur.com/Lg4aPbt.png)
-- Name the username "globalreaderjohn" and copy the auto-generated password for later use. Then select Review + create.
+2. Name the username "globalreaderjohn" and copy the auto-generated password for later use. Then select Review + create.
 ![Architecture Diagram](https://imgur.com/hDQkxKB.png)
 ![Architecture Diagram](https://imgur.com/xtmn3TU.png)
-- Go back to Users to see that the New User: globalreaderjohn has been created.
+3. Go back to Users to see that the New User: globalreaderjohn has been created.
 ![Architecture Diagram](https://imgur.com/4ZCIgSk.png)
-2. Assign Tenant-Level Global Reader.<br>
-3. In a new browser/incognito, log in as globalreaderjohn and observe result of being a Tenant Level “Global Reader”.<br>
+4. Assign Tenant-Level Global Reader.<br>
+- Select globalreaderjohn, then Assigned roles.
+![Architecture Diagram](https://imgur.com/064fkdY.png)
+- Select “Add assignments” and filter “reader”… then select “Global Reader” & then Add.
+![Architecture Diagram](https://imgur.com/O6GcXX7.png)
+5. Refresh and the new Role should show up.
+![Architecture Diagram](https://imgur.com/GhsXgxw.png)
+6. In a new browser/incognito, log in as globalreaderjohn and observe result of being a Tenant Level “Global Reader”.<br>
+- Go back to the Overview of globalreaderjohn & copy the User principal name.
+![Architecture Diagram](https://imgur.com/rMwlZLJ.png)
+- Open up a new private tab → got to Azure.portal.com → paste the user principal name → login in with the auto-generated password. You will then be asked to update the password.
+![Architecture Diagram](https://imgur.com/PVUsU84.png)
+![Architecture Diagram](https://imgur.com/GET5unv.png)
 </details>
 
 <details>
