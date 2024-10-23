@@ -380,7 +380,11 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 - Go back to the Overview of subreaderjane & copy the User principal name.
 ![Azure image](https://imgur.com/a2frJxj.png)
 - Open up a new private tab → got to Azure.portal.com → paste the user principal name → login in with the auto-generated password. You will then be asked to update the password.
+![Azure image](https://imgur.com/MoIJ1de.png)
 - Observe being able to view the subscription & resource groups as subreaderjane.
+![Azure image](https://imgur.com/NxKplo4.png)
+![Azure image](https://imgur.com/7OGhJUo.png)
+- Close browser/incognito when satisfied.
 </details>
 
 <details>
