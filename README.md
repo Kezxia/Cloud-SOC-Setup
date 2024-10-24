@@ -430,6 +430,16 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Azure image](https://imgur.com/ZCYMQWh.png)
 - Select “Review + assign”.
 ![Azure image](https://imgur.com/BKGf8PK.png)
-6. In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader.<br>
-7. Observe the result of being a Resource Group Level Contributor.<br>
+6. In a new browser/incognito, log in as rgcontributordave and observe result of being a Resource Group Level Contributor.<br>
+- Go back to the Overview of rgcontributordave & copy the User principal name.
+![Azure image](https://imgur.com/6inAdCt.png)
+- Open up a new private tab → got to Azure.portal.com → paste the user principal name → login in with the auto-generated password. You will then be asked to update the password.
+![Azure image](https://imgur.com/G5I5IIh.png)
+- Observe being able to view the subscription & resource groups as rgcontributordave.
+![Azure image](https://imgur.com/vVlZqOZ.png)
+![Azure image](https://imgur.com/W4KRplJ.png)
+- Observe being able to create/delete storage groups in the permissions-tester resource group only.
+![Azure image](https://imgur.com/8M6dLrI.png)
+![Azure image](https://imgur.com/cM3TTur.png)
+- Close browser/incognito when satisfied.
 </details>
