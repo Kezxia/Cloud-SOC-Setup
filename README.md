@@ -421,6 +421,15 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Azure image](https://imgur.com/eHj37xO.png)
 - Click on “Review + assign”.
 ![Azure image](https://imgur.com/BKGf8PK.png)
+6. Assign Subscription-Level Reader.<br>
+- Search for Subscriptions → select on your Subscription → select Access control (IAM) & Add a role assignment.
+![Azure image](https://imgur.com/WtFr8b6.png)
+- Search for and select “Reader” → select next.
+![Azure image](https://imgur.com/qDGVgEQ.png)
+- Select “+ select members”, → select rgcontributordave → click select.
+![Azure image](https://imgur.com/ZCYMQWh.png)
+- Select “Review + assign”.
+![Azure image](https://imgur.com/BKGf8PK.png)
 6. In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader.<br>
 7. Observe the result of being a Resource Group Level Contributor.<br>
 </details>
