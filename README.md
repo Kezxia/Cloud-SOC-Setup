@@ -396,5 +396,20 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 
 <details>
 <summary>Part 3: Configure and Observe Resource Group Contributor (like an admin).</summary>
-
+  
+1. Back in main browser, create another user within Microsoft Entra ID (username: rgcontributordave).<br>
+- Search for Microsoft Entra ID, select Users, and select Create new user.
+![Azure image](https://imgur.com/I9e4DDI.png)
+2. Name the username "rgcontributordave" and copy the auto-generated password for later use. Then select Review + create.
+![Azure image](https://imgur.com/qrAtHq7.png)
+![Azure image](https://imgur.com/2NW0T46.png)
+3. Go back to Users to see that the New User: rgcontributordave has been created.
+![Azure image](https://imgur.com/IaJOCSB.png)
+4. Create a new resource group called “Permissions-Tester”.<br>
+- Search Resource Groups → select Create.
+- Name the Resource Group Permissions-Tester → select review + create.
+- New Resource Group shows up.
+5. Assign Resource Group-level Contributor.<br>
+6. In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader.<br>
+7. Observe the result of being a Resource Group Level Contributor.<br>
 </details>
