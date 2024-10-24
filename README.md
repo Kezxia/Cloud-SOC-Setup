@@ -413,6 +413,14 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 - Go back to Resources to see that the New Resource Group: “Permissions-Tester” has been created.
 ![Azure image](https://imgur.com/EpQIT2T.png)
 5. Assign Resource Group-level Contributor.<br>
+- Click on the Resource Group “Permissions-Tester, → select Access Control (IAM) & Add a role assignment.
+![Azure image](https://imgur.com/kS89VtH.png)
+- Click Privileged administrator roles → select “Contributor” → select next.
+![Azure image](https://imgur.com/KXmpxK7.png)
+- Click “+ select members” → select rgcontributordave → click select.
+![Azure image](https://imgur.com/eHj37xO.png)
+- Click on “Review + assign”.
+![Azure image](https://imgur.com/BKGf8PK.png)
 6. In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader.<br>
 7. Observe the result of being a Resource Group Level Contributor.<br>
 </details>
