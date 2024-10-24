@@ -407,8 +407,11 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Azure image](https://imgur.com/IaJOCSB.png)
 4. Create a new resource group called “Permissions-Tester”.<br>
 - Search Resource Groups → select Create.
-- Name the Resource Group Permissions-Tester → select review + create.
-- New Resource Group shows up.
+![Azure image](https://imgur.com/wQYn1Hi.png)
+- Name the Resource Group Permissions-Tester → select the region East US → select review + create.
+![Azure image](https://imgur.com/whmZnEp.png)
+- Go back to Resources to see that the New Resource Group: “Permissions-Tester” has been created.
+![Azure image](https://imgur.com/EpQIT2T.png)
 5. Assign Resource Group-level Contributor.<br>
 6. In a new browser/incognito, log in as rgcontributordave and observe result of being a Subscription Level Reader.<br>
 7. Observe the result of being a Resource Group Level Contributor.<br>
