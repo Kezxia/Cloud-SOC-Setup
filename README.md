@@ -91,11 +91,11 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 ![Azure image](https://imgur.com/Irqwwio.png)
 3. Create our own rule that allows any inbound traffic.<br>
 ![Azure image](https://imgur.com/DEYagKA.png)
-  - Click Inbound security rules, then click Add
-  - Change Destination port ranges from 8080 to * = any
-  - Priority needs to be lower than the priorities already there (65000) so 100 is fine
-  - Change name to DANGER_AllowAnyCustomAnyinbound (it can be any name really)
-  - Select Add
+  a. Click Inbound security rules, then click Add<br>
+  b. Change Destination port ranges from 8080 to * = any<br>
+  c. Priority needs to be lower than the priorities already there (65000) so 100 is fine<br>
+  d. Change name to DANGER_AllowAnyCustomAnyinbound (it can be any name really)<br>
+  e. Select Add<br>
 ![Azure image](https://imgur.com/zsvqd8v.png)
 4. Select Overview to see the security rule has been added.<br>
 ![Azure image](https://imgur.com/7LrEOet.png)
@@ -121,10 +121,10 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 1. Download Microsoft Remote Desktop to connect to the Windows VM.<br>
 ![Azure image](https://imgur.com/bDWjeJJ.png)<br>
 2. Copy the Windows IP address and open the Microsoft Remote Desktop app.<br>
-- Add PC and paste the IP address
-- Give the pc a name and click add
-- Double-click on windows-vm and enter the Username and Password
-- Once logged in, click Accept
+  a. Add PC and paste the IP address<br>
+  b. Give the pc a name and click add<br>
+  c. Double-click on windows-vm and enter the Username and Password<br>
+  d. Once logged in, click Accept<br>
 ![Azure image](https://imgur.com/vtg0yIs.png)
 ![Azure image](https://imgur.com/iLSFGxn.png)
 ![Azure image](https://imgur.com/cD3bHiQ.png)
@@ -167,8 +167,8 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 6. Under Feature Selection, select Database Engine Services, then click next.<br>
 ![Azure image](https://imgur.com/PlTcYDe.png)
 7. Under Database Engine Configuration, select Mixed Mode (SQL Server authentication & Windows authentication).<br>
-- enter the same password we created earlier
-- add Current User, then click next, and then install
+  a. enter the same password we created earlier<br>
+  b. add Current User, then click next, and then install<br>
 ![Azure image](https://imgur.com/qPyteur.png)
 8. Install is complete.<br>
 ![Azure image](https://imgur.com/7Jx0ZPE.png)
@@ -192,8 +192,8 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 <summary>Part 4: Enable logging for SQL Server to be ported into Windows Event Viewer.</summary>
 
 1. Search for Registry Editor and paste the Registry Path below in the search bar:
-- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security
-- Right click Security key & click on permissions
+  a. HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security<br>
+  b. Right click Security key & click on permissions<br>
 ![Azure image](https://imgur.com/H3CxFUD.png)<br>
 2. Click Add and type “NETWORK SERVICE”, then click “Check Names”, then click Ok.<br>
 ![Azure image](https://imgur.com/TfBqtxP.png)
@@ -202,8 +202,8 @@ Once you create your Azure account, you will enter into the [Azure portal](https
 4. Copy the Windows Command Prompt.<br>
 ![Azure image](https://imgur.com/WROPxyb.png)
 5. Search cmd for the command line, right click & run as admin, then paste the command below:
-  - auditpol /set /subcategory:"application generated" /success:enable /failure:enable
-  - it should successfully execute
+  a. auditpol /set /subcategory:"application generated" /success:enable /failure:enable<br>
+  b. it should successfully execute<br>
 ![Azure image](https://imgur.com/XXhbVxx.png)
 ![Azure image](https://imgur.com/teTUT6Z.png)
 
